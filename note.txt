@@ -1,0 +1,13 @@
+	// aos := []string{"*"}
+	// if os.Getenv("WS_ALLOW_ORIGINS") != "" {
+	// 	aos = strings.Split(os.Getenv("WS_ALLOW_ORIGINS"), ",")
+	// }
+
+	// cors := middleware.CORSWithConfig(middleware.CORSConfig{
+	// 	AllowOrigins: aos,
+	// })
+
+	// e.Use(cors)
+	// e.GET("/", func(c echo.Context) error {
+	// 	return c.String(http.StatusOK, "distrotion echo v0.00")
+	// })
