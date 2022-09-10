@@ -4,6 +4,7 @@ import (
 	flow1 "echomaster/flow/001"
 	flow2 "echomaster/flow/002"
 	test "echomaster/flow/testflow"
+	"net/http"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -16,6 +17,10 @@ func main() {
 		AllowOrigins: []string{"*"},
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
 	}))
+
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Echo MASTER")
+	})
 
 	apiGroup := e.Group("FLOWTEST")
 	test.UseSubroute(apiGroup)
